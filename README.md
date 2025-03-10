@@ -14,7 +14,7 @@ Download and install this module in Magisk (or other root manager).
 
 1. Finish an OTA System Update, but DO NOT click reboot.
 
-2. Press "Action" button below the module name in Magisk, make sure the patch is succeed.
+2. Press "Action" button below the module name in Magisk (or other root manager), make sure the patch is succeed.
 
 3. You MUST also Install Magisk (or other root manager) to Inactive slot.
     - For Magisk: Magisk Manager -> Home -> Magisk (Install) -> Install to Inactive Slot (After OTA)
