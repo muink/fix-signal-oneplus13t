@@ -12,17 +12,19 @@ Download and install this module in Magisk (or other root manager).
 
 ### How to fix bootloop
 
-1. Finish an OTA System Update, but DO NOT click reboot.
+Make sure you have this module installed before OTA updates.
 
-2. Press "Action" button below the module name in Magisk (or other root manager), make sure the patch is succeed.
+1. Finish an OTA system update, but DO NOT click Restart.
 
-3. You MUST also Install Magisk (or other root manager) to Inactive slot.
+2. Press the "Action" button under the module name in Magisk (or other root manager), make sure the patch is successful.
+
+3. You MUST also install Magisk (or other root manager) to inactive slot.
     - For Magisk: Magisk Manager -> Home -> Magisk (Install) -> Install to Inactive Slot (After OTA)
 
-4. Reboot in System Update
+4. Press "Restart" in System Update
 
 ----
 
 > [!WARNING]  
 > This module will patch `dtbo` partition to fix bootloop.<br>
-> DO NOT lock the bootloader with modified dtbo (or other partition) in **any** slot.
+> DO NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
