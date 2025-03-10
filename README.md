@@ -24,5 +24,5 @@ Download and install this module in Magisk (or other root manager).
 ----
 
 > [!WARNING]  
-> This module will patch `dtbo` partition to fix bootloop.
+> This module will patch `dtbo` partition to fix bootloop.<br>
 > DO NOT lock the bootloader with modified dtbo (or other partition) in **any** slot.
