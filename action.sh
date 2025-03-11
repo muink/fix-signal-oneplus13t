@@ -9,7 +9,7 @@ sleep_pause() {
     # APatch and KernelSU needs this
     # but not KSU_NEXT, MMRL
     if [ -z "$MMRL" ] && [ -z "$KSU_NEXT" ] && { [ "$KSU" = "true" ] || [ "$APATCH" = "true" ]; }; then
-        sleep 10
+        sleep 6
     fi
 }
 
