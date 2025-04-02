@@ -23,8 +23,16 @@ Make sure you have this module installed before OTA updates.
 
 4. Press "Restart" in System Update
 
-----
-
 > [!WARNING]  
 > This module will patch `dtbo` partition to fix bootloop.<br>
 > DO NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
+
+----
+
+## Thanks to
+
+- [@koaaN](https://xdaforums.com/m/koaan.3433581/)
+
+- [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
+
+- [rapperskull](https://github.com/rapperskull)
