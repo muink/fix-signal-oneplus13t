@@ -1,8 +1,8 @@
-# fix-signal-oneplus13
+# fix-signal-oneplus13t
 
-Fix signal and bootloop for OnePlus 13 CN on OxygenOS 15.
+Fix signal and bootloop for OnePlus 13T CN on OxygenOS 15.
 
-[Download](https://github.com/K58/fix-signal-oneplus13/releases)
+[Download](https://github.com/muink/fix-signal-oneplus13t/releases)
 
 ## Tutorial
 
