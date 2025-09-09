@@ -10,7 +10,7 @@ Fix signal and bootloop for OnePlus 13T CN on OxygenOS 15.
 
 Download and install this module in Magisk (or other root manager).
 
-### How to fix bootloop
+### How to fix bootloop (Doesn't currently happen on 13T)
 
 Make sure you have this module installed before OTA updates.
 
@@ -36,3 +36,4 @@ Make sure you have this module installed before OTA updates.
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
+
