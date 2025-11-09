@@ -10,16 +10,14 @@ Fix signal and bootloop for OnePlus 13 CN on OxygenOS 15 / 16.
 
 Download and install this module in Magisk (or other root manager).
 
-### How to fix bootloop (OxygenOS 15)
-
-> [!Note]  
-> OxygenOS 16 does not require bootloop fix. These steps are not needed on OxygenOS 16.
+### How to fix bootloop
 
 Make sure you have this module installed before OTA updates.
 
 1. Finish an OTA system update, but DO NOT click Restart.
 
-2. Press the "Action" button under the module name in Magisk (or other root manager), make sure the patch is successful.
+2. If you are using OxygenOS 15, press the "Action" button under the module name in Magisk (or other root manager), make sure the patch is successful.
+    - Note: **OxygenOS 16** does not require bootloop fix.
 
 3. You MUST also install Magisk (or other root manager) to inactive slot.
     - For Magisk: Magisk Manager -> Home -> Magisk (Install) -> Install to Inactive Slot (After OTA)
@@ -39,6 +37,7 @@ Make sure you have this module installed before OTA updates.
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
+
 
 
 
