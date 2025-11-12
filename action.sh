@@ -48,7 +48,7 @@ else
     exit 1
 fi
 
-if [ $(version $KERNEL_VERSION) -ge $(version "6.6.89") ]; then
+if [ $(version "$KERNEL_VERSION") -ge $(version "6.6.89") ]; then
     echo "[+] OxygenOS 16 does not require patch dtbo partition."
     echo "******************************************************"
     echo "[!] You MUST install your root manager (e.g. Magisk)"
