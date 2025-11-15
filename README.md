@@ -16,7 +16,8 @@ Make sure you have this module installed before OTA updates.
 
 1. Finish an OTA system update, but DO NOT click Restart.
 
-2. Press the "Action" button under the module name in Magisk (or other root manager), make sure the patch is successful.
+2. If you are updating to **OxygenOS 15**, press the "Action" button under the module name in Magisk (or other root manager), make sure the patch is successful.
+    - Note: **OxygenOS 16** does not require bootloop fix. If you are updating to OxygenOS 16, you can skip this step and proceed to step 3.
 
 3. You MUST also install Magisk (or other root manager) to inactive slot.
     - For Magisk: Magisk Manager -> Home -> Magisk (Install) -> Install to Inactive Slot (After OTA)

@@ -3,5 +3,5 @@ name=Fixes for OnePlus 13T
 version=v16.0.2025.11.06
 versionCode=6
 author=Fly (modified by Anya Lin)
-description=Fix signal and bootloop for OnePlus 13T CN on OxygenOS 16. **To fix bootloop, press "Action" below before you click the "Reboot" after finishing OTA System Update.**
+description=Fix signal and OnePlus 13T CN on OxygenOS 16. **To fix bootloop on OxygenOS 15, press "Action" below before you click the "Reboot" after finishing OTA System Update.**
 updateJson=https://raw.githubusercontent.com/muink/fix-signal-oneplus13t/main/update.json

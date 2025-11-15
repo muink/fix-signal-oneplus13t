@@ -3,7 +3,8 @@
 MODDIR=${0%/*}
 
 FILE="$MODDIR/dtbo.img"
-PART="/dev/block/bootdevice/by-name/dtbo"
+BOOT_PART="/dev/block/bootdevice/by-name/boot"
+DTBO_PART="/dev/block/bootdevice/by-name/dtbo"
 
 sleep_pause() {
     # APatch and KernelSU needs this
@@ -12,6 +13,8 @@ sleep_pause() {
         sleep 6
     fi
 }
+
+version() { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
 
 # Get the active slot suffix (e.g., _a or _b)
 ACT=$(getprop ro.boot.slot_suffix)
@@ -24,7 +27,7 @@ else
 fi
 
 # Ensure the dtbo partition is read-only (blockdev --getro should return 1)
-RO=$(blockdev --getro "${PART}${NONACT}")
+RO=$(blockdev --getro "${DTBO_PART}${NONACT}")
 if [ "$RO" -ne 1 ]; then
     echo "!!! Error: No pending OTA reboot."
     echo "!!! Please finish the OTA System Update"
@@ -35,14 +38,35 @@ if [ "$RO" -ne 1 ]; then
     exit 1
 fi
 
+KERNEL_VERSION=$(grep -aom1 'Linux version [0-9]\.[0-9][0-9]*\.[0-9][0-9]*-android' "${BOOT_PART}${NONACT}" 2>/dev/null | grep -o '[0-9]\.[0-9][0-9]*\.[0-9][0-9]*')
+
+if [ -n "$KERNEL_VERSION" ]; then
+    echo "Kernel version: $KERNEL_VERSION"
+else
+    echo "!!! Error: Kernel version not found in boot partition."
+    sleep_pause
+    exit 1
+fi
+
+if [ $(version "$KERNEL_VERSION") -ge $(version "6.6.89") ]; then
+    echo "[+] OxygenOS 16 does not require patch dtbo partition."
+    echo "******************************************************"
+    echo "[!] You MUST install your root manager (e.g. Magisk)"
+    echo "[!] to Inactive Slot before rebooting."
+    echo "******************************************************"
+    echo "> Done!"
+    sleep_pause
+    exit 0
+fi
+
 echo "[+] Patching dtbo in Inactive Slot (${NONACT})..."
 echo "[!] WARNING: This module will patch dtbo partition to fix bootloop."
 echo "[!] DO NOT lock the bootloader with modified dtbo."
 
 # Dump the dtbo from the non-active slot into the temporary file
-dd if="${PART}${NONACT}" of="$FILE" bs=1M
+dd if="${DTBO_PART}${NONACT}" of="$FILE" bs=1M
 if [ $? -ne 0 ]; then
-    echo "!!! Error: Failed to dump dtbo from ${PART}${NONACT}."
+    echo "!!! Error: Failed to dump dtbo from ${DTBO_PART}${NONACT}."
     sleep_pause
     exit 1
 fi
@@ -57,27 +81,27 @@ if [ $? -ne 0 ]; then
 fi
 
 # Set the partition to read-write
-blockdev --setrw "${PART}${NONACT}"
+blockdev --setrw "${DTBO_PART}${NONACT}"
 if [ $? -ne 0 ]; then
-    echo "!!! Error: Failed to set ${PART}${NONACT} to read-write."
+    echo "!!! Error: Failed to set ${DTBO_PART}${NONACT} to read-write."
     rm -f "$FILE"
     sleep_pause
     exit 1
 fi
 
 # Flash the patched dtbo file back to the non-active slot
-dd if="$FILE" of="${PART}${NONACT}" bs=1M
+dd if="$FILE" of="${DTBO_PART}${NONACT}" bs=1M
 if [ $? -ne 0 ]; then
-    echo "!!! Error: Failed to write patched dtbo to ${PART}${NONACT}."
+    echo "!!! Error: Failed to write patched dtbo to ${DTBO_PART}${NONACT}."
     rm -f "$FILE"
     sleep_pause
     exit 1
 fi
 
 # Set the partition back to read-only
-blockdev --setro "${PART}${NONACT}"
+blockdev --setro "${DTBO_PART}${NONACT}"
 if [ $? -ne 0 ]; then
-    echo "!!! Error: Failed to set ${PART}${NONACT} back to read-only."
+    echo "!!! Error: Failed to set ${DTBO_PART}${NONACT} back to read-only."
     rm -f "$FILE"
     sleep_pause
     exit 1
