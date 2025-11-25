@@ -28,7 +28,7 @@ Make sure you have this module installed before OTA updates.
 > This module will patch `dtbo` partition to fix bootloop.<br>
 > DO NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
 
-### How to Relock Bootloader
+### How to relock bootloader
 
 **Please don't.**
 
@@ -56,5 +56,6 @@ Your device will **brick** if you relock the bootloader with any modifications t
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
+
 
 
