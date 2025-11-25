@@ -36,6 +36,7 @@ Your device will **brick** if you relock the bootloader with any modifications t
 
 > [!CAUTION]
 > **This module is for rooted users. You MUST keep your bootloader unlocked.**<br>
+> To relock the bootloader, you must remove root and restore the device to stock state.
 > Do not relock your bootloader unless you fully understand what you are doing.<br>
 > On OnePlus 13, you cannot access fastboot again via key combination if the bootloader is locked.
 >
@@ -55,4 +56,5 @@ Your device will **brick** if you relock the bootloader with any modifications t
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
+
 
