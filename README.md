@@ -43,7 +43,7 @@ Your device will **brick** if you relock the bootloader with any modifications t
 > If **any** of the following are not met, relocking the bootloader **will brick your device**:
 >
 > * **Every partition in BOTH slots must be 100% stock and unmodified.**
->   * To ensure this, after restoring the stock OS on your device, download the full OTA ROM (.zip) for your current OS version and local install it TWICE: local install, then reboot, then local install it AGAIN.
+>   * To ensure this, after restoring the latest version of stock OS on your device, download the full OTA ROM (.zip) for that OS version and local install it TWICE: local install, then reboot, then local install it AGAIN.
 > * **Google account must be removed.**
 >   * On older ColorOS / OxygenOS versions, due to a critical bug, FRP (Factory Reset Protection, a.k.a. activation lock) prevents completing the initial setup, effectively bricking it.
 
@@ -56,6 +56,7 @@ Your device will **brick** if you relock the bootloader with any modifications t
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
+
 
 
 
