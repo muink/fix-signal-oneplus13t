@@ -28,6 +28,24 @@ Make sure you have this module installed before OTA updates.
 > This module will patch `dtbo` partition to fix bootloop.<br>
 > DO NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
 
+### How to Relock Bootloader
+
+**Please don't.**
+
+Your device will **brick** if you relock the bootloader with any modifications to the system partition in **any** slot (e.g., root, dtbo, custom kernel, etc.).
+
+> [!CAUTION]
+> **This module is for rooted users. You MUST keep your bootloader unlocked.**<br>
+> Do not relock your bootloader unless you fully understand what you are doing.<br>
+> On OnePlus 13, you cannot access fastboot again via key combination if the bootloader is locked.
+>
+> If **any** of the following are not met, relocking the bootloader **will brick your device**:
+>
+> * **Every partition in BOTH slots must be 100% stock and unmodified.**
+>   * To ensure this, download the full OTA ROM (.zip) for your current version and local install it TWICE: local install, then reboot, then local install it AGAIN.
+> * **Google account must be removed.**
+>   * On older ColorOS / OxygenOS versions, due to a critical bug, FRP (Factory Reset Protection, a.k.a. activation lock) prevents completing the initial setup, effectively bricking it.
+
 ----
 
 ## Thanks to
@@ -37,9 +55,3 @@ Make sure you have this module installed before OTA updates.
 - [@docnok63](https://xdaforums.com/m/docnok63.4967345/)
 
 - [rapperskull](https://github.com/rapperskull)
-
-
-
-
-
-
