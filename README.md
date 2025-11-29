@@ -25,8 +25,8 @@ Make sure you have this module installed before OTA updates.
 4. Press "Restart" in System Update
 
 > [!WARNING]  
-> This module will patch `dtbo` partition to fix bootloop.<br>
-> DO NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
+> **This module will modify `dtbo` partition to fix bootloop.** <br>
+> Do NOT lock the bootloader with modified `dtbo` (or any other partition) in **any** slot.
 
 ### How to relock bootloader
 
@@ -35,10 +35,14 @@ Make sure you have this module installed before OTA updates.
 Your device will **brick** if you relock the bootloader with any modifications to the system partition in **any** slot (e.g., root, dtbo, custom kernel, etc.).
 
 > [!CAUTION]
-> **This module is for rooted users. You MUST keep your bootloader unlocked.**<br>
-> To relock the bootloader, you must remove root and restore the device to stock state.<br>
-> Do not relock your bootloader unless you **fully** understand what you are doing.<br>
-> On OnePlus 13, you cannot access fastboot again via key combination if the bootloader is locked.
+> **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.** <br>
+> **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.** <br>
+> **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.**
+> 
+> To relock the bootloader, you **MUST** remove root and restore the device to stock state.<br>
+> **Relocking the bootloader is a dangerous operation.** Do not relock your bootloader unless you fully understand what you are doing.<br>
+> On OnePlus 13, you cannot access fastboot again via key combination if the bootloader is locked.<br>
+> If you lock your bootloader while rooted or modified, your phone will hard brick and cannot be recovered by yourself.
 >
 > If **any** of the following are not met, relocking the bootloader **will brick your device**:
 >
