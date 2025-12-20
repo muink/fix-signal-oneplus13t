@@ -1,3 +1,7 @@
+## 16.0.2025.12.20
+
+- update oplusstanvbk.img to ColorOS 16.0.2.400
+
 ## 16.0.2025.11.15
 
 - synchronize upstream updates
