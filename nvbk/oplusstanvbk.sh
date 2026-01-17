@@ -2,8 +2,8 @@
 
 CURDIR="$(cd "$(dirname $0)"; pwd)"
 
-VERSION=16.0.2.400
-MD5SUM=a51f8137dd8652b9e9da9a51c032976a
+VERSION=16.0.3.501
+MD5SUM=fa282ca6fb6342b480ed58ff30ab820a
 
 curl -o "$CURDIR/oplusstanvbk.img" -L https://raw.githubusercontent.com/muink/fix-signal-oneplus13t/refs/heads/bin/oplusstanvbk.img/${VERSION}/oplusstanvbk.img
 echo "Download completed."
