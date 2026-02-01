@@ -4,6 +4,20 @@ Fix signal and bootloop for OnePlus 13T CN on OxygenOS 15 / 16.
 
 [Download](https://github.com/muink/fix-signal-oneplus13t/releases)
 
+> [!WARNING]
+> **PSA: Anti-Rollback Protection**
+>
+> OnePlus has implemented anti-rollback protection starting with firmware version **16.0.3.50x**.
+>
+> If you are on **16.0.3.50x or higher**, **DO NOT downgrade** to any earlier version:
+> * This will cause a **HARD BRICK**.
+> * **Leaked EDL tools will not work.** Anti-rollback is specifically designed to block them.
+> * Only official/authorized EDL access can fix this state.
+>
+> Please be careful when flashing any ROMs.
+>
+> ~~Never Settle.~~ **Sometimes Settle.**
+
 ## Tutorial
 
 ### How to fix signal
@@ -36,8 +50,6 @@ Your device will **brick** if you relock the bootloader with any modifications t
 
 > [!CAUTION]
 > **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.** <br>
-> **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.** <br>
-> **This module is for rooted users. You **MUST** keep your bootloader unlocked. Do NOT lock the bootloader.**
 > 
 > To relock the bootloader, you **MUST** remove root and restore the device to stock state.<br>
 > **Relocking the bootloader is a dangerous operation.** Do not relock your bootloader unless you fully understand what you are doing.<br>
@@ -48,7 +60,7 @@ Your device will **brick** if you relock the bootloader with any modifications t
 >
 > * **Every system partition in BOTH slots must be 100% stock and unmodified.**
 >   * To ensure this, after restoring the latest version of stock OS on your device, download the full OTA ROM (.zip) for that OS version and local install it TWICE: local install, then reboot, then local install it AGAIN.
->   * Be very careful when rolling back to an older OS version. If your device has upgraded to an OS version with anti-rollback, downgrading to any earlier version will brick it.
+>   * Be very careful when rolling back to an older OS version. If your device has upgraded to an OS version with anti-rollback, downgrading to any earlier version will brick it. **Please read [the warning](#fix-signal-oneplus13) above.**
 > * **Google account must be removed.**
 >   * On older ColorOS / OxygenOS versions, due to a critical bug, FRP (Factory Reset Protection, a.k.a. activation lock) prevents completing the initial setup, effectively bricking it.
 
