@@ -1,3 +1,7 @@
+## 16.0.2026.03.17
+
+- update oplusstanvbk.img to ColorOS 16.0.5.701
+
 ## 16.0.2026.01.17
 
 - update oplusstanvbk.img to ColorOS 16.0.3.501
